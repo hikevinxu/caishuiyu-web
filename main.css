@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    font-family:"Source Han Serif SC","PingFang SC","Microsoft YaHei","Arial";
+    min-height: 500px;
+    position: relative;
+}
+
+.shuiwushi{
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.shuiwushi_container{
+    padding-top: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    background: url(./images/bg.jpg) no-repeat;
+    background-size: cover;
+    min-width: 960px;
+    position: relative;
+    /* vertical-align: inherit !important; */
+}
+
+.shuiwushi_container_two{
+    padding-top: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    background: url(./images/bg_slide1.jpg) no-repeat;
+    background-size: cover;
+    min-width: 960px;
+    position: relative;
+}
+
+.shuiwushi_container_3{
+    padding-top: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    background: url(./images/bg_slide2.jpg) no-repeat;
+    background-size: cover;
+    min-width: 960px;
+    position: relative;
+}
+
+.shuiwushi_container_4{
+    padding-top: 24px;
+    box-sizing: border-box;
+    flex: 1;
+    background: url(./images/bg_slide3.jpg) no-repeat;
+    background-size: cover;
+    min-width: 960px;
+    position: relative;
+}
+
+.shuiwushi_container .fp-tableCell,
+.shuiwushi_container_two .fp-tableCell,
+.shuiwushi_container_3 .fp-tableCell,
+.shuiwushi_container_4 .fp-tableCell {
+    display: block;
+}
+
+.header{
+    width: 88.89%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 960px;
+}
+
+.fixedImg{
+    display: block;
+    position: absolute;
+    bottom: 100px;
+    right: 80px;
+    width: 42%;
+    min-width: 500px;
+}
+
+.shuiwushi_container .content{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;
+    height: 380px;
+    background: linear-gradient(270deg, rgba(255,255,255,0.80) 0%, #FFFFFF 100%);
+}
+
+.shuiwushi_container_two .content,
+.shuiwushi_container_3 .content,
+.shuiwushi_container_4 .content{
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 900px;
+    height: 500px;
+    background: linear-gradient(270deg, rgba(255,255,255,0.80) 0%, #FFFFFF 100%);
+}
+
+.shuiwushi_container_two .content  .top,
+.feature .content .top,
+.shuiwushi_container_4 .content .top{
+    position: relative;
+    width: 100%;
+    height: 500px;
+}
+
+.shuiwushi_container_two .content .top .product,
+.shuiwushi_container_3 .content .top .product,
+.shuiwushi_container_4 .content .top .product{
+    position: absolute;
+    left: 0;
+    bottom: 219px;
+    width: 360px;
+}
+
+.shuiwushi_container_two .content .top .feature,
+.shuiwushi_container_3 .content .top .feature,
+.shuiwushi_container_4 .content .top .feature{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* width: 360px; */
+}
+
+.shuiwushi_container_two .content .top  .nextBtn,
+.shuiwushi_container_3 .content .top .nextBtn,
+.shuiwushi_container_4 .content .top .nextBtn{
+    position: absolute;
+    left: 434px;
+    bottom: -58px;
+    display: block;
+    width: 32px;
+    cursor: pointer;
+}
+
+.content h2{
+    display: block;
+    margin-top: 56px;
+    margin-left: 80px;
+    font-size: 48px;
+    color: rgba(0,0,0,0.87);
+}
+
+.content h1{ 
+    display: block;
+    font-size: 60px;
+    color: rgba(0,0,0,0.87);
+    margin-left: 80px;
+}
+
+.content .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #DCA143;
+    border-radius: 2px;
+    height: 48px;
+    width: 200px;
+    margin-left: 80px;
+    margin-top: 49px;
+    font-size: 15px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 18px;
+    cursor: pointer;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 54px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    background: #FFFFFF;
+}
+
+.footer p{
+    font-size: 12px;
+    color: rgba(0,0,0,0.38);
+    text-align: center;
+    line-height: 18px;
+}
