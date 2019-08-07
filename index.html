@@ -7,9 +7,12 @@
     <title>财税鱼</title>
     <link rel="shortcut icon" href="./logo_icon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./fullpage.css">
+    <link rel="stylesheet" href="./toast.css">
+    <link rel="stylesheet" href="./animate.css">
 </head>
 <body>
-    <div class="shuiwushi">
+    <div class="shuiwushi" id="dowebok">
         <div class="shuiwushi_container section">
             <div class="header">
                 <img style="display:block;width: 155px;height:40px;margin-left: 32px;" src="./images/logo.png" alt="">
@@ -17,21 +20,108 @@
             <div class="content">
                 <img style="display: block;width: 440px;margin-left: 40px;margin-top: 60px;" src="./images/title.png" alt="">
             </div>
+            <img class="fixedImg" src="./images/arms.png" alt="" class="clas">
         </div> 
-        <img class="fixedImg" src="./images/arms.png" alt="" class="clas"> 
+        <div class="shuiwushi_container_two section">
+            <div class="header">
+                <img style="display:block;width: 140px;height:40px;margin-left: 32px;" src="./images/logo.png" alt="">
+                <!-- <span style="display: block;margin-right: 50px;color: rgba(0,0,0,0.8)">杭州税牛科技有限公司</span> -->
+            </div>
+            <div class="content">
+                <div class="top">
+                    <img style="display:block;width:100%;" src="./images/img_slide1_text.png" alt="">
+                    <img class="product animated" src="./images/img_slide1_product.png" alt="">
+                    <img class="feature" style="display:block;width:100%;" src="./images/img_slide1_feature.png" alt="">
+                    <img class="nextBtn" src="./images/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shuiwushi_container_3 section">
+            <div class="header">
+                <img style="display:block;width: 140px;height:40px;margin-left: 32px;" src="./images/logo.png" alt="">
+                <!-- <span style="display: block;margin-right: 50px;color: rgba(0,0,0,0.8)">杭州税牛科技有限公司</span> -->
+            </div>
+            <div class="content">
+                <div class="top">
+                    <img style="display:block;width:100%;" src="./images/img_slide2_text.png" alt="">
+                    <img class="product animated" src="./images/img_slide2_product.png" alt="">
+                    <img class="feature" style="display:block;width:100%;" src="./images/img_slide2_feature.png" alt="">
+                    <img class="nextBtn" src="./images/arrow.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="shuiwushi_container_4 section">
+            <div class="header">
+                <img style="display:block;width: 140px;height:40px;margin-left: 32px;" src="./images/logo.png" alt="">
+                <!-- <span style="display: block;margin-right: 50px;color: rgba(0,0,0,0.8)">杭州税牛科技有限公司</span> -->
+            </div>
+            <div class="content">
+                <div class="top">
+                    <img style="display:block;width:100%;" src="./images/img_slide3_text.png" alt="">
+                    <img class="product animated" src="./images/img_slide3_product.png" alt="">
+                    <img class="feature" style="display:block;width:100%;" src="./images/img_slide3_feature.png" alt="">
+                    <!-- <img class="nextBtn" src="./images/arrow.png" alt=""> -->
+                </div>
+            </div>
+        </div> 
     </div>
     <div class="footer">
-        <p>Copyright 2019  |  杭州税牛科技有限公司  |  浙ICP备19028668号  |  <a href="https://res.caishuiyu.com/common/h5/privacy_agreement.html" style="text-decoration-line: none;">用户隐私协议</a>  |  All Rights Reserved</p>
-        <p>地址：杭州市西湖区金色西溪商务中心B座</p>
+        <div class="footerContent">
+            <div class="qrCode">
+                <img class="qrCodeImg" src="./images/qrCode.png" alt="">
+                <span style="font-size: 12px;color: rgba(0,0,0,0.38);">扫码下载</span>
+            </div>
+            <p>Copyright 2019  |  杭州税牛科技有限公司  |  浙ICP备19028668号  |  <a href="https://res.caishuiyu.com/common/h5/privacy_agreement.html" style="text-decoration-line: none;">用户隐私协议</a>  |  All Rights Reserved</p>
+            <p>地址：杭州市西湖区金色西溪商务中心B座</p>
+        </div>
         <!-- <div style="width:300px;margin:0 auto; padding:10px 0;display:flex; align-items: center;justify-content: center;">
             <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=33010602010246" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="./images/beian.png" style="float:left;"/><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">浙公网安备 33010602010246号</p></a>
         </div> -->
     </div>
-    <!-- <script src="./jquery.js"></script> -->
+    <script src="./jquery.js"></script>
     <script src="https://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <!-- <script src="./toast.js"></script> -->
+    <script src="./fullpage.js"></script>
+    <script src="./toast.js"></script>
     <script>
-        $(function(){         
+         $(function(){
+            $('.product').hide();
+            $('#dowebok').fullpage({
+                navigation: true,
+                navigationPosition: 'right',
+                css3: true,
+                afterLoad: function(anchorLink,index){
+                    console.log(index)
+                    if(index == 2 || index == 3 || index == 4){
+                        $('.product').addClass('fadeInUp')
+                        $('.product').show()
+                    }
+                },
+                onLeave: function(index,nextIndex,direction){
+                    if($('.product').hasClass('fadeInUp')){
+                        $('.product').removeClass('fadeInUp')
+                        $('.product').hide()
+                    }
+                }
+            });
+
+            $('.nextBtn').on('click',function(){
+                $.fn.fullpage.moveSectionDown()
+            })
+            
+            function addToast(){
+                    $.Toast("提示", "专家端正在赶来的路上", "warning", {
+                        position_class: "toast-top-center",
+                        stack: false,
+                        has_icon:false,
+                        has_close_btn:true,
+                        fullscreen:false,
+                        timeout:3000,
+                        sticky:false,
+                        // has_progress:true,
+                        rtl:false
+                    });
+            }
+
             $('#btn').on('click',function(){
                 addToast()
             })
