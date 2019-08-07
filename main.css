@@ -198,7 +198,7 @@ html,body{
 .footer .qrCode{
     position: absolute;
     bottom: 10px;
-    right: -110px;
+    right: 0;
     /* display: block; */
     width: 110px;
     display: flex;
