@@ -5,7 +5,7 @@
 
 html,body{
     height: 100%;
-    font-family:"Source Han Serif SC","PingFang SC","Microsoft YaHei","Arial";
+    font-family:"PingFang SC","Microsoft YaHei","Arial";
     min-height: 500px;
     position: relative;
 }
@@ -180,25 +180,25 @@ html,body{
     height: 54px;
     padding-top: 23px;
     padding-bottom: 23px;
-    min-width: 1280px;
+    /* min-width: 1280px; */
     background: #FFFFFF;
 }
 
-
-
 .footer  .footerContent{
-    width: 100%;
+    width: 900px;
     height: 100%;
     position: relative;
     display: flex;
     flex-flow: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .footer .qrCode{
     position: absolute;
     bottom: 10px;
-    right: 270px;
+    right: -110px;
     /* display: block; */
     width: 110px;
     display: flex;
